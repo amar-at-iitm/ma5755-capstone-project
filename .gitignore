@@ -1,0 +1,26 @@
+# Ignore virtual environments
+capstone/bin  
+capstone/lib
+capstone/lib64
+capstone/
+pyvenv.cgf
+capstone/include
+# Ignore downloaded data
+data/raw/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore OS-specific files
+.cfg
+.DS_Store
+# Ignore Jupyter Notebook checkpoints   
+.ipynb_checkpoints/
+# Ignore environment files
+.env
+# Ignore IDE-specific files
+.vscode/
+# Ignore Docker files
+
+# Ignore any other files you don't want to track
