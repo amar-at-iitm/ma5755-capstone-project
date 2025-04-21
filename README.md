@@ -41,12 +41,27 @@ cd ma5755-capstone-project
 
 ### Step 2: Build the Docker Image (One-Time Only)
 ```bash
-docker build -t capstone-project .
+docker-compose build
 ```
 Build Specific Container
 ```bash
 docker compose build <container_name>
 ```
+### Run the complete docker 
+```bash
+docker-compose up
+```
+Go to 
+1. http://localhost:8888
+   - For all the notebook files
+3. http://localhost:8501
+   - For the Streamlit app dashboard
+
+Run specific container
+```bash
+docker-compose up <container_name>
+```
+
 ### Run Docker Container
 This mounts your current folder into the Docker container and gives you a terminal:
 For linux/mac
@@ -61,7 +76,7 @@ For Windows PowerShell
 ```powershell
 docker run -it --rm -v ${PWD}:/app capstone-project bash
 ```
-### Step 4: Run Python Script Inside Container
+#### Run Python Script Inside Container
 ```bash
 python scripts/data_download.py
 ```
@@ -69,14 +84,10 @@ python scripts/data_download.py
 python scripts/combined_rainfall_yield_dashboard.py
 ```
 
-### Step 5: Exit the Container
+#### Exit the Container
 ```bash
 exit
 ```
-
----
-
-
 ---
 
 ## Dependencies

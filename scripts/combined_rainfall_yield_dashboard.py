@@ -29,7 +29,7 @@ for feature in geojson['features']:
     feature['id'] = feature['properties']['NAME_2'].strip().lower()
 
 # Sidebar: View selector
-st.sidebar.header("🏠 Dashboard Controls")
+st.sidebar.header("Dashboard Controls")
 view_type = st.sidebar.radio("Select View", ["Scatter: Yield vs Rainfall", "District Map"])
 
 # Common filters
@@ -123,4 +123,4 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("Built with ❤️ using Streamlit & Plotly | © Kirankumar Malothu")
+st.markdown("Built with using Streamlit & Plotly | © Kirankumar Malothu")
