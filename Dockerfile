@@ -12,5 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the project
 COPY . .
 
-# Default command (you can override this in docker-compose)
-CMD ["python", "scripts/data_download.py"]
+# Leave CMD to be overridden by docker-compose
