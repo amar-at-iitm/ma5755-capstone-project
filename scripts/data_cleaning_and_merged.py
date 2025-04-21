@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from IPython.display import display
 
 df = pd.read_csv("./data/raw/area_production_yield_data.csv")
@@ -239,9 +240,12 @@ final_df['rainfall_deviation'] = final_df['monsoon_avg'] - final_df['normal_mons
 print("Final Merged DataFrame Shape:", final_df.shape)
 print(final_df[['state_name', 'dist_name', 'year', 'monsoon_avg', 'normal_monsoon_avg', 'rainfall_deviation']].head())
 
+# Create the directory if it doesn't exist
+os.makedirs("data/cleaned", exist_ok=True)
+
 # Optional: Save for future
-final_df.to_csv("final_crop_rainfall_merged.csv", index=False)
-final_df.to_csv("merged_dataset.csv", index=False)
+final_df.to_csv("data/cleaned/final_crop_rainfall_merged.csv", index=False)
+final_df.to_csv("data/cleaned/merged_dataset.csv", index=False)
 
 import seaborn as sns
 import matplotlib.pyplot as plt
