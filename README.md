@@ -20,8 +20,8 @@ link:- http://data.icrisat.org/dld/index.html
 ma5755-capstone-project/
 ├── data/
 │   └── raw/                  # Raw data CSVs are saved here
-│   └── cleaned/                  # Raw data CSVs are saved here
-│   └── india_district.geojson      # Script to download data from Google Drive
+│   └── cleaned/              # cleaned files
+│   └── india_district.geojson # District map
 ├── scripts/
 │   └── data_download.py      # Script to download data from Google Drive
     └── data_cleaning_and_merged.py # Supporting file
