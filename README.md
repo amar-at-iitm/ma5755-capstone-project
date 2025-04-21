@@ -41,7 +41,7 @@ cd ma5755-capstone-project
 
 ### Step 2: Build the Docker Image (One-Time Only)
 ```bash
-docker build -t capstone-project .
+docker-compose build
 ```
 Build Specific Container
 ```bash
