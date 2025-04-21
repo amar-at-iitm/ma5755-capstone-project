@@ -6,7 +6,7 @@ capstone/
 pyvenv.cgf
 capstone/include
 # Ignore downloaded data
-data/raw/
+#data/raw/
 
 # Ignore Python cache files
 __pycache__/
