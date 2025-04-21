@@ -15,8 +15,21 @@ link:- http://data.icrisat.org/dld/index.html
   - Python
 
 ---
+## Project Folder Structure
+```
+ma5755-capstone-project/
+├── data/
+│   └── raw/                  # Raw data CSVs are saved here
+│   └── cleaned/                  # Raw data CSVs are saved here
+│   └── india_district.geojson      # Script to download data from Google Drive
+├── scripts/
+│   └── data_download.py      # Script to download data from Google Drive
+├── Dockerfile                # Docker setup
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project instructions (this file)
+```
 
-## How to Start the Project (For All Teammates)
+## How to Start the Project 
 
 ### Step 1: Clone the Repository
 ```bash
@@ -28,8 +41,11 @@ cd ma5755-capstone-project
 ```bash
 docker build -t capstone-project .
 ```
-
-### Step 3: Run Docker Container
+Build Specific Container
+```bash
+docker compose build <container_name>
+```
+### Run Docker Container
 This mounts your current folder into the Docker container and gives you a terminal:
 For linux/mac
 ```bash
@@ -47,6 +63,9 @@ docker run -it --rm -v ${PWD}:/app capstone-project bash
 ```bash
 python scripts/data_download.py
 ```
+```bash
+python scripts/combined_rainfall_yield_dashboard.py
+```
 
 ### Step 5: Exit the Container
 ```bash
@@ -55,17 +74,6 @@ exit
 
 ---
 
-## Project Folder Structure
-```
-ma5755-capstone-project/
-├── data/
-│   └── raw/                  # Raw data CSVs are saved here
-├── scripts/
-│   └── data_download.py      # Script to download data from Google Drive
-├── Dockerfile                # Docker setup
-├── requirements.txt          # Python dependencies
-├── README.md                 # Project instructions (this file)
-```
 
 ---
 
