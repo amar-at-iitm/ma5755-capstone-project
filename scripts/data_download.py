@@ -16,11 +16,14 @@ files = {
 #https://drive.google.com/file/d/1hM76osh-LVPL7oQcEZvpX9DhfZ0qBHx3/view?usp=sharing
 
 
-# Download each file
+# Download each file only if not already present
 for filename, file_id in files.items():
-    url = f"https://drive.google.com/uc?id={file_id}"
     output_path = os.path.join("data/raw", filename)
-    print(f"Downloading {filename}...")
-    gdown.download(url, output_path, quiet=False)
+    if os.path.exists(output_path):
+        print(f"{filename} already exists. Skipping download.")
+    else:
+        url = f"https://drive.google.com/uc?id={file_id}"
+        print(f"Downloading {filename}...")
+        gdown.download(url, output_path, quiet=False)
 
-print("All files downloaded to data/raw/")
+print("\n All required files are present in data/raw/")
