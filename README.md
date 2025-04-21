@@ -1,8 +1,8 @@
 # MA5755-capstone-project: Drought & Rainfall Impact Analysis
 Objective: Assess the impact of changing rainfall patterns on crop productivity over decades on the TCI-ICRISAT District Database (571 districts, 1966-2017).
 
-ICRISAT District-level dataset
-link:- http://data.icrisat.org/dld/index.html
+- [ICRISAT District-level dataset](http://data.icrisat.org/dld/index.html)
+- [india_district.geojson](https://drive.google.com/file/d/1N-rz3VugxTZYrrru5AmtE2oMBDsH2zDZ/view?usp=sharing) is used for the district map
 
 ---
 
@@ -19,16 +19,22 @@ link:- http://data.icrisat.org/dld/index.html
 ```
 ma5755-capstone-project/
 ├── data/
-    └── raw/                  # Raw data CSVs are saved here
-    └── cleaned/              # cleaned files
-  └── india_district.geojson # District map
+    └── raw/                                # Raw data CSVs are saved here
+    └── cleaned/                            # cleaned files
+    └── india_district.geojson              # District map
 ├── scripts/
-    └── data_download.py      # Script to download data from Google Drive
-    └── data_cleaning_and_merged.py # Supporting file
+    └── data_download.py                    # Script to download data from Google Drive
+    └── ML.ipynb                            # Model Training Notebook
+    └── data_cleaning.ipynb                 # Data Cleaning Notebook
+    └── eda_analysis.ipynb                  # EDA Notebook
+    └── data_cleaning_and_merged.py         # Supporting file for streamlit
     └── combined_rainfall_yield_dashboard.py # streamlit dashboard
-├── Dockerfile                # Docker setup
-├── requirements.txt          # Python dependencies
-├── README.md                 # Project instructions (this file)
+├── Dockerfile                              # Docker setup
+├── docker-compose.yml                      # Docker Compose file
+├── definitions.pdf                         # Some important terms used in the datasets
+├── units.pdf                               # Units used in the datasets
+├── requirements.txt                        # Python dependencies
+├── README.md                               # Project instructions (this file)
 ```
 
 ## How to Start the Project 
@@ -43,11 +49,11 @@ cd ma5755-capstone-project
 ```bash
 docker-compose build
 ```
-Build Specific Container
+Build a Specific Container
 ```bash
 docker compose build <container_name>
 ```
-### Run the complete docker 
+### Run the complete Docker Setup 
 ```bash
 docker-compose up
 ```
@@ -57,14 +63,14 @@ Go to
 3. http://localhost:8501
    - For the Streamlit app dashboard
 
-Run specific container
+Run a specific container
 ```bash
 docker-compose up <container_name>
 ```
 
 ### Run Docker Container
 This mounts your current folder into the Docker container and gives you a terminal:
-For linux/mac
+For Linux/Mac
 ```bash
 docker run -it --rm -v "$PWD":/app capstone-project bash
 ```
@@ -94,11 +100,35 @@ exit
 All dependencies are listed in `requirements.txt` and are installed inside the Docker container.
 
 ---
+### Run Specific Part
+#### Get Data
+```bash
+docker-compose up get_data
+```
+
+#### Run The Notebook
+```bash
+docker-compose up jupyter_notebook
+```
+It will:
+- Start Jupyter in /app/scripts
+- Show all .ipynb notebooks
+- Be accessible at: http://localhost:8888
+
+#### Run The Streamlit App
+```bash
+docker-compose up streamlit-app
+```
+It will:
+- Run rainfall_yield_app.py
+- Start the streamlit app
+- Accessible at: http://localhost:8501
+
 
 ## Work Done Till Now
 - [x] Docker setup complete
 - [x] Data download script written
-- [x] Folder structure organized
+- [x] Folder structure organised
 - [x] GitHub repository ready for collaboration
 - [x] Interactive dashboard
 
