@@ -24,6 +24,8 @@ ma5755-capstone-project/
 │   └── india_district.geojson      # Script to download data from Google Drive
 ├── scripts/
 │   └── data_download.py      # Script to download data from Google Drive
+    └── data_cleaning_and_merged.py
+    └── combined_rainfall_yield_dashboard.py
 ├── Dockerfile                # Docker setup
 ├── requirements.txt          # Python dependencies
 ├── README.md                 # Project instructions (this file)
@@ -87,6 +89,7 @@ All dependencies are listed in `requirements.txt` and are installed inside the D
 - [x] Data download script written
 - [x] Folder structure organized
 - [x] GitHub repository ready for collaboration
+- [x] Interactive dashboard
 
 ---
 
