@@ -51,6 +51,12 @@ docker compose build <container_name>
 ```bash
 docker-compose up
 ```
+Go to 
+1. http://localhost:8888
+   - For all the notebook files
+3. http://localhost:8501
+   - For the Streamlit app dashboard
+
 Run specific container
 ```bash
 docker-compose up <container_name>
