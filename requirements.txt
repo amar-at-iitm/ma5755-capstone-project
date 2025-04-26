@@ -1,3 +1,5 @@
+numpy
+pmdarima
 pandas
 gdown
 notebook
@@ -6,5 +8,3 @@ plotly
 matplotlib
 scikit-learn
 seaborn
-numpy
-pmdarima

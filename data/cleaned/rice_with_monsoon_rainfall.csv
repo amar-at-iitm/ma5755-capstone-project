@@ -1,4 +1,4 @@
-state_name,dist_name,year,monsoon_rainfall,rice_area_(1000_ha),rice_production_(1000_tons),rice_yield_(kg_per_ha)
+state_name,dist_name,year,monsoon_rainfall_millimeters,rice_area_(1000_ha),rice_production_(1000_tons),rice_yield_(kg_per_ha)
 chhattisgarh,durg,1966,719.0,548.0,185.0,337.59
 chhattisgarh,durg,1967,1155.3,547.0,409.0,747.71
 chhattisgarh,durg,1968,1091.8,556.3,468.0,841.27
