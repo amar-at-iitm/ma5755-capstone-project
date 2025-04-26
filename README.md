@@ -130,6 +130,7 @@ It will:
 - [x] Data download script written
 - [x] Folder structure organised
 - [x] GitHub repository ready for collaboration
+- [x] ML model
 - [x] Interactive dashboard
 - [x] Report
 
