@@ -131,6 +131,7 @@ It will:
 - [x] Folder structure organised
 - [x] GitHub repository ready for collaboration
 - [x] Interactive dashboard
+- [x] Report
 
 ---
 
